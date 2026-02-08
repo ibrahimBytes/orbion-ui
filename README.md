@@ -79,7 +79,7 @@ Here are some inspirational modern dashboard styles (dark mode, cards, responsiv
 
 ```bash
 # Clone & install
-git clone https://github.com/YOUR_USERNAME/orbion-frontend.git
+git clone https://github.com/ibrahimBytes/orbion-ui.git
 cd orbion-frontend
 npm install
 
@@ -156,7 +156,7 @@ Contributions welcome — especially around:
 
 Standard process:
 
-1. Fork → branch (`feat/xxx`, `fix/yyy`)
+1. Fork → branch 
 2. Follow existing code style & TypeScript strictness
 3. Add/update tests when touching logic
 4. Open PR with clear description
