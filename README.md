@@ -1,184 +1,85 @@
-# Orbion — Smart City Platform
+# Orbion — Smart City Dashboard (Frontend)
 
-**Architecture & UX Exploration**
-
-Orbion is a conceptual smart city platform that explores how city-scale digital services can be designed as a **coherent, distributed system** rather than a collection of fragmented applications.
+**A modular, production-grade React + TypeScript frontend for smart city monitoring — focused on clean architecture, explicit UI states, and long-term maintainability.**
 
 <p align="center">
-  <em>One predictable interface · Distributed backend · Calm UX</em>
+  <img src="https://placehold.co/1200x600/png?text=Orbion+Smart+City+Dashboard&font=roboto&desc=Modern+responsive+UI+with+dark+mode" alt="Orbion Dashboard Screenshot" width="800"/>
 </p>
 
-## What is Orbion trying to solve?
+<p align="center">
+  <a href="https://github.com/YOUR_USERNAME/orbion-frontend/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/orbion-frontend/ci.yml?style=flat-square&logo=github&label=CI" alt="CI Status"/>
+  </a>
+  <a href="https://github.com/YOUR_USERNAME/orbion-frontend/releases">
+    <img src="https://img.shields.io/github/v/release/YOUR_USERNAME/orbion-frontend?style=flat-square&color=purple&logo=semantic-release" alt="Release"/>
+  </a>
+  <a href="https://github.com/YOUR_USERNAME/orbion-frontend/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/YOUR_USERNAME/orbion-frontend?style=flat-square&color=blue" alt="License"/>
+  </a>
+  <a href="https://github.com/YOUR_USERNAME/orbion-frontend/stargazers">
+    <img src="https://img.shields.io/github/stars/YOUR_USERNAME/orbion-frontend?style=flat-square&color=yellow" alt="Stars"/>
+  </a>
+</p>
 
-Modern city dwellers interact with many disconnected digital systems:
+## ✨ Why Orbion?
 
-- Transport apps  
-- Event & cultural platforms  
-- Weather services  
-- Payment portals  
-- Civic & municipal services  
+Most dashboard UIs shine on the happy path but break in real-world usage (loading, empty data, errors, slow networks).  
+Orbion treats **every state as first-class UI**, uses **strong TypeScript boundaries**, follows **feature-based modular structure**, and keeps things deliberately simple — no micro-frontends, no backend coupling, no feature bloat.
 
-This fragmentation creates:
+**Core goals**
 
-- High **cognitive load**  
-- Broken user continuity  
-- Inconsistent experiences  
-- Repeated authentication & context switching  
+- Clean, scalable frontend architecture for large teams & long lifecycles
+- Predictable navigation & state handling
+- Calm, minimal, production-ready design language
+- Full responsiveness (desktop → tablet → mobile)
+- Explicit handling of loading / empty / error / success states
+- Token-based dark/light mode with consistent contrast
 
-Orbion asks:  
-**What if city services felt like a single, calm, predictable product — without replacing existing infrastructure?**
+This is **not** a design showcase or proof-of-concept — it's built like a real product frontend that can grow for years.
 
-## Core Concept
+## 📸 Screenshots
 
-Orbion treats the city as three overlapping layers:
+<p align="center">
+  <img src="https://placehold.co/800x500/png?text=Dashboard+View+(Dark+Mode)&font=roboto" alt="Dashboard - Dark Mode" width="45%"/>
+  <img src="https://placehold.co/800x500/png?text=Explore+Section+(Filters)&font=roboto" alt="Explore Section" width="45%"/>
+</p>
 
-1. **A unified citizen interface** — calm, consistent, low-friction  
-2. **A distributed system for engineers** — modular, resilient, observable  
-3. **A coordination & governance layer** for city operators  
+<p align="center">
+  <img src="https://placehold.co/800x500/png?text=Mobile+Bottom+Navigation&font=roboto" alt="Mobile View" width="45%"/>
+  <img src="https://placehold.co/800x500/png?text=Notifications+Panel&font=roboto" alt="Notifications" width="45%"/>
+</p>
 
-The platform is deliberately **not** a monolithic super-app.  
-Instead, it acts as a **composition and experience layer** over independent domains.
+*(Replace these placeholders with real screenshots from `/public/screenshots` or a `/docs` folder — highly recommended!)*
 
-## Current Prototype Scope
+## 🛠 Tech Stack
 
-This phase focuses exclusively on **product foundation and interaction model**:
+- **React** 18+ (functional components + hooks)
+- **TypeScript** — strict mode, no `any` abuse
+- **Vite** — blazing fast dev & build
+- **React Router v6** — declarative, type-safe routing
+- **Tailwind CSS** — design tokens + utility-first
+- **Framer Motion** — subtle, intentional micro-interactions
+- **clsx** / **tailwind-merge** — clean conditional classes
 
-- Responsive layout & grid system  
-- Navigation architecture  
-- Dashboard information hierarchy  
-- Notification structure  
-- Explore / discovery interface  
-- Settings & personalization system  
-- Empty states, loading patterns, error states  
+**No:**
 
-**Intentionally deferred:**
+- Redux / Zustand / Context bloat (local state + URL state preferred)
+- External UI libraries (everything is built with Tailwind + primitives)
+- Backend / API logic (pure frontend layer)
 
-- Production backend  
-- Authentication & sessions  
-- Real-time infrastructure  
-- Live data integrations  
+## 🚀 Quick Start
 
-## Main Sections
+```bash
+# Clone & install
+git clone https://github.com/YOUR_USERNAME/orbion-frontend.git
+cd orbion-frontend
+npm install
 
-### Dashboard  
-Single-screen overview of what matters right now
+# Development server (Vite)
+npm run dev
 
-- Transport status (delays, next arrivals)  
-- Current weather & short-term forecast  
-- Nearby events & happenings  
-- Active alerts & civic notices  
-- Quick actions  
+# Build for production
+npm run build
 
-**Design priorities**  
-Clarity over density · Predictable patterns · Low cognitive load · Consistent component behavior
-
-### Explore  
-Structured discovery engine
-
-- Search-first interaction  
-- Category & contextual filters  
-- Rich result cards with clear affordances  
-
-Goal: controlled, calm discovery instead of overwhelming navigation menus.
-
-### Notifications  
-Structured model for different classes of updates
-
-- Critical alerts  
-- Time-sensitive reminders  
-- Informational / contextual updates  
-
-Lays groundwork for future real-time integration.
-
-### Settings  
-Lightweight personalization layer
-
-- Profile (name, preferred location/home area)  
-- Preferences (theme mode, units, notification controls)  
-- System information  
-
-## Responsive & Adaptive Design
-
-Single codebase, adaptive interface across:
-
-- Desktop (wide layout)  
-- Tablet (hybrid layout)  
-- Mobile (compact + touch-first)  
-
-**Key principles**
-
-- Layout **reflow** instead of device-specific redesigns  
-- Consistent typography & spacing scale  
-- Touch-friendly targets & gestures where needed  
-- Navigation adapts gracefully to screen constraints  
-
-## Design Language
-
-Strict, intentional constraints:
-
-- Calm & minimal visual style  
-- Clear visual & spatial hierarchy  
-- Card-based modular composition  
-- Neutral, accessible color system  
-- Predictable navigation patterns  
-
-The interface is deliberately **restrained** to minimize cognitive overhead.
-
-## Architecture Perspective
-
-Orbion models the city as a **distributed system** of independent domains with:
-
-- Strong **modularity** & clear domain boundaries  
-- Explicit **contracts** between components  
-- **Resilience** & graceful degradation  
-- **Event-driven** thinking  
-- **Observability** as a first-class concern  
-
-### Technology Direction (Exploratory – not final)
-
-**Current / planned stack direction:**
-
-- Frontend: React + TypeScript  
-- Styling: modern CSS (likely Tailwind or similar)  
-- API layer: Node.js services (conceptual)  
-- Communication: event-driven architecture (planned)  
-- Real-time: WebSockets / pub-sub (planned)  
-- Storage: PostgreSQL + Redis (planned)  
-
-These choices reflect **architectural intent**, not a completed implementation.
-
-## Current Status
-
-✅ Working UI/UX prototype  
-✅ Defined product structure & interaction logic  
-✅ Initial design system & component library  
-🚧 No production backend yet  
-🚧 No authentication  
-🚧 No real-time layer  
-🚧 No live data integrations  
-
-## Purpose of the Project
-
-**One central question:**
-
-> What would city software look like if it were designed as a coherent, scalable system **from the beginning**?
-
-Orbion exists to document this exploration through:
-
-- Interface & interaction design  
-- Product structure & navigation logic  
-- Architectural reasoning & domain modeling  
-
-## Next Steps (planned)
-
-1. Implement **one real vertical slice** (e.g. public transport or events)  
-2. Define **domain boundaries** and service contracts  
-3. Introduce **limited real-world data** (mock → real APIs)  
-4. Add basic observability & system modeling  
-5. Experiment with real-time notification patterns  
-
----
-
-Feedback, critique, alternative approaches and forks are very welcome.
-
-Built as an architectural & UX thought experiment — 2025/2026 
+# Preview production build
+npm run preview 
