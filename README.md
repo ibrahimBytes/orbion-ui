@@ -165,16 +165,6 @@ Standard process:
 
 MIT License — see [LICENSE](./LICENSE)
 
-Built with focus and calm in Hyderabad, India 🇮🇳
+Built with focus and calm in Tirupati, India 🇮🇳
 
 Star ⭐ if this architecture resonates with you!
-```
-
-### Final tips:
-
-- Replace `YOUR_USERNAME/orbion-frontend` with your real GitHub repo path.
-- Add your actual screenshots (light/dark mode dashboard, mobile bottom nav, explore with filters, notifications panel) — they will make the README much stronger.
-- If you deploy a live demo (Vercel/Netlify), add a "Live Demo →" button near the top.
-- Consider adding a small `CONTRIBUTING.md` file if contributions grow.
-
-Let me know if you'd like to shorten it, add more sections (e.g., Roadmap), or adjust anything! 🚀
