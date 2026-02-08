@@ -4,7 +4,7 @@
 **A modular, production-grade React + TypeScript frontend for smart city monitoring — focused on clean architecture, explicit UI states, and long-term maintainability.**
 
 <p align="center">
-  <img src="https://placehold.co/1200x600/png?text=Orbion+Smart+City+Dashboard&font=roboto&desc=Modern+responsive+UI+with+dark+mode" alt="Orbion Dashboard Screenshot" width="800"/>
+  <img src="/orbion-screenshot.png" width="800"/>
 </p>
 
 <p align="center">
